@@ -13,7 +13,9 @@
   },
   "author": "Zygimantas Butas",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "material-components-web": "^0.30.0"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

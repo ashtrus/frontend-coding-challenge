@@ -14,39 +14,103 @@
     }
   });
 </script>
+
+<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
 </head>
 <body>
 
-  <div>
+  <main>
+    <h1 class="mdc-typography--display1">Tell us about yourself!</h1>
 
-    <form action="">
+    <form action="#" id="contactForm">
+
+      <div>
+
+        <div class="mdc-form-field">
+          <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+            <input id="fullName" name="fullName" type="text" class="mdc-text-field__input" required>
+            <label for="fullName" class="mdc-text-field__label">
+              Full Name
+            </label>
+            <div class="mdc-line-ripple"></div>
+          </div>
+        </div>
+
+        <div class="mdc-form-field">
+          <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+            <input id="email" name="email" type="email" class="mdc-text-field__input" required>
+            <label for="email" class="mdc-text-field__label">
+              Email
+            </label>
+            <div class="mdc-line-ripple"></div>
+          </div>
+        </div>
+
+        <div class="mdc-form-field">
+          <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+            <input id="dob" name="dob" type="date" class="mdc-text-field__input" required>
+            <label for="dob" class="mdc-text-field__label">
+              Date of birth
+            </label>
+            <div class="mdc-line-ripple"></div>
+          </div>
+        </div>
+
+        <div class="mdc-select" role="listbox">
+          <div class="mdc-select__surface" tabindex="0">
+            <div class="mdc-select__label">Select category</div>
+            <div class="mdc-select__selected-text"></div>
+            <div class="mdc-select__bottom-line"></div>
+          </div>
+          <div class="mdc-menu mdc-select__menu">
+            <ul class="mdc-list mdc-menu__items">
+              <li id="Science" class="mdc-list-item" role="option" tabindex="0">
+                Science
+              </li>
+              <li id="Advertisement" class="mdc-list-item" role="option" tabindex="0">
+                Advertisement
+              </li>
+              <li id="Politics" class="mdc-list-item" role="option" tabindex="0">
+                Politics
+              </li>
+              <li id="Events" class="mdc-list-item" role="option" tabindex="0">
+                Events
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mdc-form-field">
+          <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+            <input id="brand" name="brand" type="text" class="mdc-text-field__input">
+            <label for="brand" class="mdc-text-field__label">
+              Brands
+            </label>
+            <div class="mdc-line-ripple"></div>
+            <button type="button" id="btnAddBrand" class="mdc-button mdc-button--raised">+</button>
+          </div>
+        </div>
+
+        <div id="brandList" class="mdc-chip-set"></div>
+        
+      </div>
       
-      <label for="fullName">Full Name</label>
-      <input type="text" name="fullName" id="fullame">
-      
-      <label for="email">Email</label>
-      <input type="email" name="email" id="email">
-      
-      <label for="dob">Date of birth</label>
-      <input type="date" name="dob" id="dob">
-      
-      <label for="brand">Brands</label>
-      <input type="text" name="brand" id="brand">
-      
-      <label for="title">Select category</label>
-      <select id="title" name="title">
-        <option value="science">Science</option>
-        <option value="advertisement">Advertisement</option>
-        <option value="politics">Politics</option>
-        <option value="events">Events</option>
-      </select>
-      
-      <button type="submit">Send</button>
+      <button type="submit" class="mdc-button mdc-button--raised">Send</button>
+
+      <div>
+        <p class="mdc-typography--headline" id="messageText"></p>
+      </div>
       
     </form>
+    
 
-  </div>
-  
+  </main>
+
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <script>
+    window.mdc.autoInit();
+  </script>
+
   <script src="./bundle.js"></script>
 
 </body>
